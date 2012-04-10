@@ -1,0 +1,27 @@
+PROCLIB
+
+A library for system information.
+
+Files:
+    -proc.h: main header
+    -proc.c: implementation of common functions
+    -proc_cpu.h: header for the cpu info functions
+    -proc_cpu.c: implementation of the cpu info functions
+    -proc_mem.h: header for the memory info functions
+    -proc_mem.c: implementation of the memory info functions
+
+Common Fuctions:
+    -char*  proc_search_keyword(char* file, char* keyword): looks in file
+    for the value associated with keyword
+    -int proc_num_of_occ(char* file, char* keyword): looks for the number
+    of occurences of keyword in file
+
+CPU Info Functions:
+    -char* proc_cpu_vendor(): returns the vendor of the 1st CPU
+    -char* proc_cpu_model(): returns the name of the CPU
+
+Memory Info Functions:
+    -int proc_mem_total(proc_mem_unit unit): returns the total memory in
+    the unit associated with unit
+    -int proc_mem_free(proc_mem_unit unit): returns the amount of free
+    memory in unit
